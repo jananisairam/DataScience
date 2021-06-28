@@ -1,0 +1,83 @@
+============================= test session starts ==============================
+
+platform linux -- Python 3.5.2, pytest-3.2.1, py-1.10.0, pluggy-0.4.0
+
+rootdir: /projects/challenge, inifile:
+
+collected 16 items
+
+test.py F...F.....F.F..F
+
+=================================== FAILURES ===================================
+
+__________________________ TestPlots.test_plot1_title __________________________
+
+self = <test.TestPlots object at 0x7f51473c3320>
+
+    def test_plot1_title(self):
+
+>       assert self.plot1.axes.get_title() == self.actual["plot1"]["plot1_title"]
+
+E       AssertionError: assert '' == 'Average temperature across years'
+
+E         + Average temperature across years
+
+test.py:27: AssertionError
+
+__________________________ TestPlots.test_plot2_title __________________________
+
+self = <test.TestPlots object at 0x7f51436f2160>
+
+    def test_plot2_title(self):
+
+>       assert self.plot2.axes.get_title() == self.actual["plot2"]["plot2_title"]
+
+E       AssertionError: assert '' == 'Correlation'
+
+E         + Correlation
+
+test.py:39: AssertionError
+
+__________________________ TestPlots.test_plot3_bins ___________________________
+
+self = <test.TestPlots object at 0x7f5143693860>
+
+    def test_plot3_bins(self):
+
+>       assert len(self.plot3.properties()["children"]) == self.actual["plot3"]["plot3_bin"]
+
+E       assert 33 == 31
+
+E        +  where 33 = len([<matplotlib.patches.Rectangle object at 0x7f514587ba90>, <matplotlib.patches.Rectangle object at 0x7f51458869b0>, <ma... <matplotlib.patches.Rectangle object at 0x7f51436bfbe0>, <matplotlib.patches.Rectangle object at 0x7f514588b0f0>, ...])
+
+test.py:57: AssertionError
+
+__________________________ TestPlots.test_plot3_title __________________________
+
+self = <test.TestPlots object at 0x7f514368dc50>
+
+    def test_plot3_title(self):
+
+>       assert self.plot3.axes.get_title() == self.actual["plot3"]["plot3_title"]
+
+E       AssertionError: assert '' == 'Average temperature distribution'
+
+E         + Average temperature distribution
+
+test.py:63: AssertionError
+
+__________________________ TestPlots.test_plot4_title __________________________
+
+self = <test.TestPlots object at 0x7f51436a2a90>
+
+    def test_plot4_title(self):
+
+>       assert self.plot4.axes.get_title() == self.actual["plot4"]["plot4_title"]
+
+E       AssertionError: assert '' == 'Violin plot'
+
+E         + Violin plot
+
+test.py:72: AssertionError
+
+===================== 5 failed, 11 passed in 0.77 seconds ======================
